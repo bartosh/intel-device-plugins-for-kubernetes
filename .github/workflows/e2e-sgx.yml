@@ -7,6 +7,11 @@ on:
         required: true
         default: 'intel-sgx-plugin intel-sgx-initcontainer intel-sgx-admissionwebhook'
 
+  pull_request:
+    branches:
+      - main
+      - 'release-*'
+
 env:
   IMAGES: ${{ github.event.inputs.images }}
 

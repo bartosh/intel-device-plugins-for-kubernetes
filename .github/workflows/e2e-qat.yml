@@ -7,6 +7,11 @@ on:
         required: true
         default: 'intel-qat-plugin:devel crypto-perf:devel'
 
+  pull_request:
+    branches:
+      - main
+      - 'release-*'
+
 env:
   IMAGES: ${{ github.event.inputs.images }}
 
